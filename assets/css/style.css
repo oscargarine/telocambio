@@ -107,18 +107,6 @@ button{
   cursor: pointer;
 }
 
-body {
-    display: grid;
-    height: 100vh;
-    width: auto;
-    grid-template-areas:
-    "aside search"
-    "aside main"
-    "footer main";
-    grid-template-columns: 15% auto;
-    grid-template-rows: 8% auto 10%;
-}
-
 .cardDesk{
   display: none;
 }
