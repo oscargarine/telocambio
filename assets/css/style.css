@@ -1,0 +1,228 @@
+
+*{
+  border: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+  color: whitesmoke;
+  display: grid;
+  grid-template-areas: "aside" "search" "main" "footer";
+  grid-template-rows: 8% 10% auto 8%;
+  height: 100vh;
+}
+
+aside{
+  grid-area: aside;
+  background-color: hwb(25 6% 8%);
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+menu{
+  display:none;
+}
+
+i{
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.search-container{
+  grid-area: search;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid #494949;
+}
+
+select{
+  width: 60%;
+  border: none;
+  border-radius: 10px;
+  padding: 6px;
+  margin: 0.5rem;
+}
+
+label{
+  font-size: 0.75rem;
+  font-weight:normal;
+  margin-top: 10px;
+}
+
+main{
+  grid-area: main;
+  background-color: rgb(48, 48, 48);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardMobi{
+  border: 0.5px solid #494949;
+  border-radius: 0.25rem;
+  margin: 10px, 0;
+  text-align: center;
+}
+
+.cardMobi img{
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.cardMobi p{
+  margin-bottom: 5px;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards img{
+  cursor: zoom-in;
+}
+
+button{
+  border: none;
+  width: 80%;
+  background-color:burlywood;
+  padding: 10px;
+  font-weight: 400;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    width: auto;
+    grid-template-areas:
+    "aside search"
+    "aside main"
+    "footer main";
+    grid-template-columns: 15% auto;
+    grid-template-rows: 8% auto 10%;
+}
+
+.cardDesk{
+  display: none;
+}
+
+.pagination{
+  margin: 1rem;
+  text-align: center;
+}
+
+.pagination a{
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: 1px solid #202421;
+  border-radius: 10px;
+  color: #c38858;
+  margin: 10px 5px;
+}
+
+.pagination a.active{
+  background-color: #c38858;
+  color: white;
+}
+
+footer{
+  grid-area: footer;
+  background-color: #c38858;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERIES */
+
+@media(width >= 576px){
+  body{
+    display: grid;
+    height: 100vh;
+    width: auto;
+    grid-template-areas: 
+    "aside search" 
+    "aside main" 
+    "footer main";
+
+    grid-template-columns: 15% auto;
+    grid-template-rows: 8% auto 10%;
+  }
+
+  aside{
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .bars{
+    display: none;
+  }
+
+  menu{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  menu a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .cardMobi{
+    display: none;
+  }
+
+  .grid{
+    background-color:#d4ccbb;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    margin: 0.5rem;
+    width: 80%;
+  }
+
+  .cardDesk{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #202421 solid 0.5px;
+    margin: 10px 0;
+    border-radius: 0.25rem;
+  }
+
+  .cardDesk img{
+    padding: 25px;
+  }
+
+  .cardDesk p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .footer-text{
+    text-align: center;
+  }
+}

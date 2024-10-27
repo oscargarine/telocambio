@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>PetLife</title>
+</head>
+
+<body>
+  
+<!-- Navbar  -->
+<aside>
+    <div>
+      <i class="fa-solid fa-paw"></i>
+      <span>PetLife</span>
+    </div>
+
+    <div class="bars">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+  <menu>
+    <p><a href="#">Inicio</a></p>
+    <p><a href="#">Productos</a></p>
+    <p><a href="#">Servicios</a></p>
+    <p><a href="#">Contacto</a></p>
+  </menu>
+</aside>
+
+<!-- Filtro  -->
+<section class="search-container">
+  <label for="search">Ordenar por:</label>
+  <select name="search" id="carlist">
+    <option value="Precio">Precio (menor a mayor)</option>
+    <option value="Precio">Precio (mayor a menor)</option>
+  </select>
+</section>
+
+<!-- Cards  -->
+<main>
+  <div class="cards">
+     <!-- Mobile  -->
+      <div class="cardMobi">
+        <img src="./assets/img/royal_canin_perrito.png" alt="perrito 1">
+        <p>Royal Canin Mini Junior</p>
+        <p>$59.990</p>
+        <button>Comprar</button>
+      </div>
+
+     <!-- Desktop  -->
+     <div class="grid">
+      <div class="cardDesk">
+        <img src="./assets/img/royal_canin_gatito.png" alt="Gatito 1">
+        <p>Royal Canin Mini Junior</p>
+        <p>$59.990</p>
+        <button>Comprar</button>
+      </div>
+      <div class="cardDesk">
+        <img src="./assets/img/royal_canin_perrito.png" alt="Perrito 1">
+        <p>Royal Canin Mini Junior</p>
+        <p>$59.990</p>
+        <button>Comprar</button>
+      </div>
+      <div class="cardDesk">
+        <img src="./assets/img/royal_canin_gatito_2.png" alt="Gatito 2">
+        <p>Royal Canin Mini Junior</p>
+        <p>$59.990</p>
+        <button>Comprar</button>
+      </div>
+      <div class="cardDesk">
+        <img src="./assets/img/royal_canin_perrito_2.png" alt="Perrito 2">
+        <p>Royal Canin Mini Junior</p>
+        <p>$59.990</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Pagination  -->
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a class="active" href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">&raquo;</a>
+  </div>
+</main>
+
+
+<!-- Footer  -->
+ <footer>
+  <div class="icons">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+   </div>
+   <div class="footer-text">Todos los derechos reservados</div>
+ </footer>
+
+</body>
+</html>
