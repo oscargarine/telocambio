@@ -1,6 +1,7 @@
 
 *{
   border: 0;
+  margin: 0;
   padding: 0;
   box-sizing:border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -9,7 +10,11 @@
 body{
   color: whitesmoke;
   display: grid;
-  grid-template-areas: "aside" "search" "main" "footer";
+  grid-template-areas:
+    "aside"
+    "search"
+    "main"
+    "footer";
   grid-template-rows: 8% 10% auto 8%;
   height: 100vh;
 }
