@@ -219,17 +219,16 @@ footer .icons a{
     flex-direction: column;
     padding: 3.5rem;
     font-size: 1rem;
-
   }
 
   menu p a{
     color:rgb(0, 0, 0);
     text-decoration: none;
   }
-
-  .cards{
-    display: none;
-  }
+.cards{
+  display: none;
+}
+ 
   .cardMobi{
     display: none;
   }
