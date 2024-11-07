@@ -12,21 +12,48 @@ body{
   display: grid;
   grid-template-areas:
     "aside"
+    "navbar"
     "search"
     "main"
     "footer";
-  grid-template-rows: 8% 10% auto 8%;
+  grid-template-rows: 8% 8% 10% auto 8%;
   height: 100vh;
 }
 
 aside{
   grid-area: aside;
-  background-color: hwb(25 6% 8%);
   padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  color:rgb(0, 0, 0);
+  background-color: #ffe600;
+
+}
+
+.navbar{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  background-color: #ffe600;
+  justify-content: space-between;
+  padding: 1.5rem;
+  font-size: 1rem;
+  
+}
+
+.navbar a{
+  text-decoration: none;
+  color:rgb(0, 0, 0);
+
+}
+.navbar i{
+  transition:font-size 0.6s ease;
+}
+.navbar i:hover{
+  transform: scale(2);
 }
 
 menu{
@@ -81,7 +108,17 @@ main{
 .cardMobi img{
   justify-content: center;
   align-items: center;
+  border-radius: 15%;
   padding: 25px;
+  transition: all 0.4s ease;
+  filter: grayscale(100);
+}
+.cardMobi img:hover{
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  transform: scale(1.2);
+  filter: grayscale(0);
 }
 
 .cardMobi p{
@@ -99,19 +136,9 @@ main{
   cursor: zoom-in;
 }
 
-button{
-  border: none;
-  width: 80%;
-  background-color:burlywood;
-  padding: 10px;
-  font-weight: 400;
-  border-radius: 10px;
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
+.grid{
+  display:none;
 }
-
 .cardDesk{
   display: none;
 }
@@ -144,49 +171,76 @@ footer{
   align-items: center;
 }
 
-/* MEDIA QUERIES */
+footer .icons a{
+  text-decoration: none;
+  padding: 5px 2px;
+}
 
+
+/* MEDIA QUERIES */
 @media(width >= 576px){
   body{
     display: grid;
     height: 100vh;
     width: auto;
     grid-template-areas: 
+    "aside navbar"
     "aside search" 
     "aside main" 
     "footer main";
 
     grid-template-columns: 15% auto;
-    grid-template-rows: 8% auto 10%;
+    grid-template-rows: 8% 8% auto 10%;
   }
 
   aside{
+    grid-area: aside;
     justify-content: flex-start;
     flex-direction: column;
     padding: 1.5rem;
+  }
+
+  .navbar{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbar p{
+    text-align: center;
   }
 
   .bars{
     display: none;
   }
 
+
   menu{
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 3.5rem;
     font-size: 1rem;
+
   }
 
-  menu a{
-    color: #ffffff;
+  menu p a{
+    color:rgb(0, 0, 0);
     text-decoration: none;
   }
 
+  .cards{
+    display: none;
+  }
   .cardMobi{
     display: none;
   }
 
   .grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .grid section{
     background-color:#d4ccbb;
     display: flex;
     flex-direction: row;
@@ -194,28 +248,37 @@ footer{
     justify-content: center;
     align-items:center;
     margin: 0.5rem;
-    width: 80%;
+    width: 100%;
   }
 
   .cardDesk{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: #202421 solid 0.5px;
     margin: 10px 0;
     border-radius: 0.25rem;
   }
 
   .cardDesk img{
     padding: 25px;
+    cursor: zoom-in;
+    transition: all 0.4s ease;
+    filter: grayscale(100);
   }
-
+  .cardDesk img:hover{
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    transform: scale(1.2);
+    filter: grayscale(0);
+  }
   .cardDesk p{
     margin-top: 5px;
     margin-bottom: 5px;
   }
 
   .footer-text{
+    font-size: 12px;
     text-align: center;
   }
 }
