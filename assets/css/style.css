@@ -43,6 +43,9 @@ aside{
   font-size: 1rem;
   
 }
+.navbar2{
+  display: none;
+}
 
 .navbar a{
   text-decoration: none;
@@ -185,9 +188,9 @@ footer .icons a{
     height: 100vh;
     width: auto;
     grid-template-areas: 
-    "aside navbar"
-    "aside search" 
-    "aside main" 
+    "aside navbar2"
+    "aside search"
+    "aside main"
     "footer main";
 
     grid-template-columns: 15% auto;
@@ -202,11 +205,22 @@ footer .icons a{
   }
 
   .navbar{
-    width: 100%;
-    justify-content: space-between;
+    display: none;
   }
 
-  .navbar p{
+.navbar2{
+  display: flex;
+  flex-direction: row;
+
+  background-color: #ffe600;
+  justify-content: space-between;
+  padding: 1.5rem;
+  font-size: 1rem;
+  grid-area: navbar2;
+  width: 100%;
+}
+
+  .navbar2 p{
     text-align: center;
   }
 
